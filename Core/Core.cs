@@ -16,6 +16,7 @@ using System.Text.Json.Nodes;
 using Extensions.Identity;
 using static Extensions.Constants;
 using Microsoft.Identity.Client;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Linq;
 
@@ -123,7 +124,7 @@ namespace Extensions
         /// <summary>
         /// The private object used to manage locks on file I/O.
         /// </summary>
-        private static readonly object LockManager = new object();
+        private static readonly Lock LockManager = new();
         #endregion Properties
 
         #region Auth

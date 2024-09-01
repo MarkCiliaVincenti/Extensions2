@@ -9,6 +9,7 @@ using Microsoft.Graph.Models;
 using System;
 using System.Collections.Generic;
 using System.Text.Json;
+using System.Threading;
 
 namespace Extensions
 {
@@ -22,7 +23,7 @@ namespace Extensions
         /// <summary>
         /// The lock object to manage file update concurrency.
         /// </summary>
-        private static readonly object _lock = new object();
+        private static readonly Lock _lock = new();
 
         #region Helper Methods
         /// <summary>

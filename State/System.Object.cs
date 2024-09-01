@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text.Json;
+using System.Threading;
 
 namespace Extensions
 {
@@ -28,7 +29,7 @@ namespace Extensions
         /// <summary>
         /// The private object used to manage locks on file I/O.
         /// </summary>
-        private static readonly object lockManager = new object();
+        private static readonly Lock lockManager = new();
 
         #region T Load<T>()
         /// <summary>
