@@ -124,7 +124,7 @@ namespace Extensions
         /// <summary>
         /// The private object used to manage locks on file I/O.
         /// </summary>
-        private static readonly Lock LockManager = new();
+        private static readonly Lock LockManager = LockFactory.Create();
         #endregion Properties
 
         #region Auth

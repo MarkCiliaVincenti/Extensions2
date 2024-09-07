@@ -29,7 +29,7 @@ namespace Extensions
         /// <summary>
         /// The private object used to manage locks on file I/O.
         /// </summary>
-        private static readonly Lock lockManager = new();
+        private static readonly Lock lockManager = LockFactory.Create();
 
         #region T Load<T>()
         /// <summary>

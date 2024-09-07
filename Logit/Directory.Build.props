@@ -2,8 +2,14 @@
   <PropertyGroup>
     <VersionPrefix>6.5.800</VersionPrefix>
     <LangVersion>preview</LangVersion>
+    <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
     <Company>Cornelius J. van Dyk</Company>
     <Copyright>Copyright © 2009-2024</Copyright>
     <Product>www.nuget.org/packages/GCCHigh.Extensions.Logit</Product>
   </PropertyGroup>
+  <ItemGroup>
+    <Using Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net9.0'))" Alias="Lock" Include="System.Threading.Lock" />
+    <Using Condition="!$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net9.0'))" Alias="Lock" Include="Backport.System.Threading.Lock" />
+    <Using Alias="LockFactory" Include="Backport.System.Threading.LockFactory" />
+  </ItemGroup>	
 </Project>
