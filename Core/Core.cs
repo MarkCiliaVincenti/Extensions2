@@ -16,7 +16,6 @@ using System.Text.Json.Nodes;
 using Extensions.Identity;
 using static Extensions.Constants;
 using Microsoft.Identity.Client;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Linq;
 
