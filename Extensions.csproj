@@ -409,7 +409,7 @@
     <PackageReference Include="Microsoft.SharePointOnline.CSOM" Version="16.1.24713.12007" />
     <PackageReference Include="System.Diagnostics.EventLog" Version="6.0.0" />
     <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="6.0.1" />
-    <PackageReference Include="Backport.System.Threading.Lock" Version="2.0.3" />
+    <PackageReference Include="Backport.System.Threading.Lock" Version="2.0.5" />
   </ItemGroup>
   <ItemGroup>
     <None Update="TenantConfig.json">
