@@ -31,7 +31,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Graph" Version="5.49.0" />
-    <PackageReference Include="Backport.System.Threading.Lock" Version="2.0.5" />
+    <PackageReference Include="Backport.System.Threading.Lock" Version="3.1.0" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\Extensions-128x128.png">
